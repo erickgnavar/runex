@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Runex</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Runex <small>Run code</small></h1>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" name="code" id="exampleInputFile">
+                    </div>
+                    <button type="submit" class="btn btn-default">Run</button>
+                </form>
+                {% if result %}
+                <hr>
+                <code>
+                    {{ result }}
+                </code>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
